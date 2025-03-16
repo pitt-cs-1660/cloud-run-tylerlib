@@ -7,7 +7,7 @@
  * ++++ ADD YOUR FIREBASE CONFIGURATION BELOW ++++
  * === Firebase Apikey and Domain ===
  */
-const config = {
+const firebaseConfig = {
   apiKey: 'AIzaSyAsLpvnfrXguSkd9PutLWjehDrLZHOMu_s',
   authDomain: 'cs1660-tcl27.firebaseapp.com'
 };
