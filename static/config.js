@@ -11,7 +11,7 @@ const firebaseConfig = {
   apiKey: 'AIzaSyAsLpvnfrXguSkd9PutLWjehDrLZHOMu_s',
   authDomain: 'cs1660-tcl27.firebaseapp.com'
 };
-export default firebaseConfig;
+//export default firebaseConfig;
 
 /**
  * Firebase configuration
