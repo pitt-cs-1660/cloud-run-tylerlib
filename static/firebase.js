@@ -6,7 +6,7 @@
  *
  * NOTE: YOU ONLY NEED TO MODIFY THE VOTE FUNCTION AT THE BOTTOM OF THIS FILE.
  */
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 // Watch for state change from sign in
 function initApp() {
@@ -120,7 +120,22 @@ async function vote(team) {
       /*
        * ++++ YOUR CODE HERE ++++
        */
-      window.alert(`Not implemented yet!`);
+
+      const formData = new URLSearchParams();
+      formData.append("team",team);
+
+      const response = await fetch("/",{
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/x-www-form-urlencoded",
+          "Authorization": "Bearer ${token}",
+        },
+        body: formData,
+      });
+
+      if(response.ok){
+        location.reload();
+      }
 
     } catch (err) {
       console.log(`Error when submitting vote: ${err}`);
