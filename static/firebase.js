@@ -6,7 +6,7 @@
  *
  * NOTE: YOU ONLY NEED TO MODIFY THE VOTE FUNCTION AT THE BOTTOM OF THIS FILE.
  */
-firebase.initializeApp(config);
+firebase.initializeApp(firebaseConfig);
 
 // Watch for state change from sign in
 function initApp() {
