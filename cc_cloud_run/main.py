@@ -30,6 +30,8 @@ async def read_root(request: Request):
     spaces_count = 0
     for v in votes:
         vote_data.append(v.to_dict())
+
+    for v in vote_data:
         if v["team"] == "TABS":
             tabs_count += 1
         else:
@@ -62,7 +64,7 @@ async def create_vote(team: Annotated[str, Form()]):
         })
 
     # create a new vote document in firestore
-    return {"detail": "Not implemented yet!"}
+    return {"detail": f"Vote cast for {team}"}
 
     # ====================================
     # ++++ STOP CODE ++++

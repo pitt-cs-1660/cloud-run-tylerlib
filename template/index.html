@@ -55,9 +55,12 @@
   <script>
     document.addEventListener("DOMContentLoaded", function() {
       <!-- add Event Listener "click" to the vote -->
-      // document.getElementById("voteTabs").addEventListener("click", function () {
-      //   vote("TABS");
-      // });
+      document.getElementById("voteTabs").addEventListener("click", function () {
+        vote("TABS");
+       });
+      document.getElementById("voteSpaces").addEventListener("click", function () { vote("SPACES") });
+      document.getElementById("signInButton").addEventListener("click", function () { toggle() } );
+
     })
   </script>
 </body>
